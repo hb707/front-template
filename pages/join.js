@@ -9,7 +9,8 @@ const Join = () => {
         const nickname = e.target.nickname.value;
         console.log(email, password, nickname)
         const payload = { email, password, nickname }
-        const response = await axios.post('http://localhost:4000/join', payload, {
+        const baseURL = process.env.NODE_ENV === 'production' ? '54.180.147.166' : 'http://localhost:4000/'
+        const response = await axios.post(baseURL + '/join', payload, {
             'Content-type': 'application/json',
             withCredentials: true,
         })

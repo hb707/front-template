@@ -30,3 +30,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+#내가 추가한거 👇
+hanbin-key.pem
